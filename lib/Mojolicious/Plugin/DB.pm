@@ -2,14 +2,14 @@ package Mojolicious::Plugin::DB;
 
 use Mojo::Base 'Mojolicious::Plugin';
 
-use ReplyTable::Schema;
+use GiftTable::Schema;
 
 sub register {
     my ( $self, $app ) = @_;
 
     $app->helper( schema => sub {
         my ($c) = @_;
-        return state $schema = ReplyTable::Schema->connect( $c->config('database') );
+        return state $schema = GiftTable::Schema->connect( $c->config('database') );
     } );
 
     $app->helper( auth => sub {

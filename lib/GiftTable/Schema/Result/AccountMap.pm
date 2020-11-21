@@ -1,4 +1,4 @@
-package ReplyTable::Schema::Result::AccountMap;
+package GiftTable::Schema::Result::AccountMap;
 use parent 'DBIx::Class::Core';
 
 __PACKAGE__->table('account_maps');
@@ -11,7 +11,7 @@ __PACKAGE__->add_columns(
 
 __PACKAGE__->set_primary_key('id');
 
-__PACKAGE__->belongs_to(account => 'ReplyTable::Schema::Result::Account', 'account_id');
-__PACKAGE__->belongs_to(selected => 'ReplyTable::Schema::Result::Account', 'selected_id');
+__PACKAGE__->belongs_to(account => 'GiftTable::Schema::Result::Account', 'account_id');
+__PACKAGE__->belongs_to(selected => 'GiftTable::Schema::Result::Account', 'selected_id');
 
 1;

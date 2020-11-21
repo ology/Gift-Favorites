@@ -1,4 +1,4 @@
-package ReplyTable::Schema::Result::Response;
+package GiftTable::Schema::Result::Response;
 use parent 'DBIx::Class::Core';
 
 __PACKAGE__->table('responses');
@@ -12,7 +12,7 @@ __PACKAGE__->add_columns(
 
 __PACKAGE__->set_primary_key('id');
 
-__PACKAGE__->belongs_to(account => 'ReplyTable::Schema::Result::Account', 'account_id');
-__PACKAGE__->belongs_to(favorite => 'ReplyTable::Schema::Result::Favorite', 'favorite_id');
+__PACKAGE__->belongs_to(account => 'GiftTable::Schema::Result::Account', 'account_id');
+__PACKAGE__->belongs_to(favorite => 'GiftTable::Schema::Result::Favorite', 'favorite_id');
 
 1;

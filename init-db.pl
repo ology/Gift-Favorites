@@ -3,7 +3,7 @@ use strict;
 use warnings;
 
 use lib 'lib';
-use ReplyTable::Schema;
+use GiftTable::Schema;
 
 my ($name, $pass) = @ARGV;
 
@@ -16,7 +16,7 @@ unlink $db_file
 unlink $db_file . '.journal'
     if -e $db_file . '.journal';
 
-my $schema = ReplyTable::Schema->connect($config->{database}, '', '');
+my $schema = GiftTable::Schema->connect($config->{database}, '', '');
 
 $schema->deploy({ add_drop_table => 1 });
 

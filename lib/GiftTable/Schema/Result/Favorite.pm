@@ -1,4 +1,4 @@
-package ReplyTable::Schema::Result::Favorite;
+package GiftTable::Schema::Result::Favorite;
 use parent 'DBIx::Class::Core';
 
 __PACKAGE__->table('favorites');

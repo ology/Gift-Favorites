@@ -3,11 +3,11 @@ use strict;
 use warnings;
 
 use lib 'lib';
-use ReplyTable::Schema;
+use GiftTable::Schema;
 
 my $config = do './gift_table.conf';
 
-my $schema = ReplyTable::Schema->connect($config->{database}, '', '');
+my $schema = GiftTable::Schema->connect($config->{database}, '', '');
 
 $schema->resultset('Account')->create({ name => 'aaron', password => 'aaron' });
 $schema->resultset('Account')->create({ name => 'abi', password => 'abi' });

@@ -1,5 +1,5 @@
 use utf8;
-package ReplyTable::Schema;
+package GiftTable::Schema;
 
 use strict;
 use warnings;

@@ -1,12 +1,12 @@
 use utf8;
-package ReplyTable::Schema::Result::Account;
+package GiftTable::Schema::Result::Account;
 
 # Created by DBIx::Class::Schema::Loader
 # DO NOT MODIFY THE FIRST PART OF THIS FILE
 
 =head1 NAME
 
-ReplyTable::Schema::Result::Account
+GiftTable::Schema::Result::Account
 
 =cut
 
