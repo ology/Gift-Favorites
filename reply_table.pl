@@ -75,20 +75,8 @@ get '/table' => sub {
   }
 
   my @items;
-
   while (my $favorite = $favorites->next) {
     push @items, [$favorite->name, exists $response{ $favorite->id } ? $response{ $favorite->id } : ''];
-  }
-
-  my $data = [];
-
-  for my $tuple (@items) {
-    if ($tab eq 'name') {
-      push @$data, ["$tuple->[0]:", $c->render_to_string(template => 'input', value => $tuple->[1])];
-    }
-    else {
-      push @$data, ["$tuple->[0]:", $tuple->[1]];
-    }
   }
 
   my $accounts = $c->schema->resultset('Account')->search({ id => { '!=' => $account->id } });
@@ -100,9 +88,10 @@ get '/table' => sub {
     selected => ucfirst($selected_name),
     tab => $tab,
     diff => $diff,
+    items => \@items,
   );
 
-  $c->reply->table($data);
+  $c->render(template => 'reply_table');
 } => 'table';
 
 post '/table' => sub {
