@@ -3,7 +3,7 @@ use lib 'lib';
 
 use Data::Dumper::Compact 'ddc';
 
-my $config = plugin 'Config' => { file => 'reply_table.conf' };
+my $config = plugin 'Config' => { file => 'gift_table.conf' };
 plugin 'DB';
 
 app->secrets($config->{secrets});

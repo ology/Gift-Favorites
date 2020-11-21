@@ -5,7 +5,7 @@ use warnings;
 use lib 'lib';
 use ReplyTable::Schema;
 
-my $config = do './reply_table.conf';
+my $config = do './gift_table.conf';
 
 my $schema = ReplyTable::Schema->connect($config->{database}, '', '');
 

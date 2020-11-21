@@ -7,7 +7,7 @@ use ReplyTable::Schema;
 
 my ($name, $pass) = @ARGV;
 
-my $config = do './reply_table.conf';
+my $config = do './gift_table.conf';
 
 (my $db_file = $config->{database}) =~ s/^.*?=(.*)$/$1/;
 
