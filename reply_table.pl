@@ -89,8 +89,6 @@ get '/table' => sub {
     diff => $diff,
     items => \@items,
   );
-
-  $c->render(template => 'reply_table');
 } => 'table';
 
 post '/table' => sub {
