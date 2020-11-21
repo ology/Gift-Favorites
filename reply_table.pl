@@ -4,7 +4,6 @@ use lib 'lib';
 use Data::Dumper::Compact 'ddc';
 
 my $config = plugin 'Config' => { file => 'reply_table.conf' };
-plugin 'ReplyTable';
 plugin 'DB';
 
 app->secrets($config->{secrets});
