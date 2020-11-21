@@ -1,0 +1,6 @@
+% if (flash('error')) {
+    %= tag h2 => (style => 'color:red') => flash('error')
+% }
+% if (flash('message')) {
+    %= tag h2 => (style => 'color:green') => flash('message')
+% }

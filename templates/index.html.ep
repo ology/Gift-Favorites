@@ -1,0 +1,27 @@
+% layout 'default';
+
+<div class="container">
+
+%= include '_flash'
+
+<p></p>
+<h2>Login</h2>
+
+<form action="/login" method="post">
+  <div class="form-row">
+    <div class="col-3">
+      <label for="username">Username</label>
+      <input type="text" class="form-control" id="username" name="username">
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="col-3">
+      <label for="password">Password</label>
+      <input type="password" class="form-control" id="password" name="password">
+    </div>
+  </div>
+  <p></p>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+</div>
