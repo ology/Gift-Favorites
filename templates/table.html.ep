@@ -33,13 +33,19 @@
     % for my $row (@$items) {
       <tr>
         <td><%== $row->[0] %>:</td>
+      % if ($tab eq 'name') {
         <td><input type="text" class="form-control" name="response" value="<%= $row->[1] %>"></td>
+      % } else {
+        <td><%= $row->[1] %></td>
+      % }
       </tr>
     % }
   </tbody>
 </table>
 
+% if ($tab eq 'name') {
 <button type="submit" class="btn btn-primary">Submit Your Favorites</button>
+% }
 </form>
 
 <p></p>
